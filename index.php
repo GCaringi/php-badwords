@@ -6,7 +6,6 @@ $taboo_words = $_GET["words"];
 
 $censored_text = str_replace($taboo_words, "***", $original_text)
 
-
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +26,7 @@ $censored_text = str_replace($taboo_words, "***", $original_text)
         <h4>
             Paragrafo Censurato
         </h4>
-        <small>Parole da Censurare: <?= $taboo_words ?></small>
+        <small>Parole da Censurare: <strong><?= $taboo_words ?></strong></small>
         <p>
             <?= $censored_text; ?>
         </p>
