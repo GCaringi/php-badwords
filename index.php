@@ -23,12 +23,23 @@ $censored_text = str_replace($taboo_words, "***", $original_text)
         <p>
             <?= $original_text ?>
         </p>
+        <small>
+            Lunghezza testo: <?= mb_strlen($original_text) ?>
+        </small>
         <h4>
             Paragrafo Censurato
         </h4>
-        <small>Parole da Censurare: <strong><?= $taboo_words ?></strong></small>
+        <small>
+            Parole da Censurare: 
+                <strong>
+                    <?= $taboo_words ?>
+                </strong>
+        </small>
         <p>
             <?= $censored_text; ?>
         </p>
+        <small>
+            Lunghezza testo: <?= mb_strlen($censored_text) ?>
+        </small>
     </body>
 </html>
